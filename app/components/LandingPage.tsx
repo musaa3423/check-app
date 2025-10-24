@@ -12,10 +12,8 @@ export default function LandingPage({ onStart }: LandingPageProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [showQR, setShowQR] = useState(false);
   
-  // Get the current URL (will be the Vercel URL in production)
-  const siteUrl = typeof window !== 'undefined' 
-    ? window.location.origin 
-    : 'https://check-app.vercel.app';
+  // استخدام رابط Vercel الحقيقي - يعمل على جميع الأجهزة
+  const siteUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://check-app-git-main-musaa3423s-projects.vercel.app';
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-teal-50 via-blue-50 to-indigo-100 p-4 md:p-8 lg:p-12 relative overflow-hidden">
