@@ -1,0 +1,52 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="houseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4A574;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8956A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="#E8F5E9"/>
+  
+  <!-- House roof -->
+  <path d="M 50 90 L 100 50 L 150 90 Z" fill="#8B4513"/>
+  
+  <!-- Chimney -->
+  <rect x="120" y="60" width="15" height="25" fill="#A0522D"/>
+  <rect x="117" y="57" width="21" height="5" fill="#8B4513"/>
+  
+  <!-- Smoke -->
+  <ellipse cx="127" cy="48" rx="8" ry="5" fill="#B0BEC5" opacity="0.6"/>
+  <ellipse cx="132" cy="42" rx="6" ry="4" fill="#B0BEC5" opacity="0.5"/>
+  <ellipse cx="125" cy="36" rx="5" ry="3" fill="#B0BEC5" opacity="0.4"/>
+  
+  <!-- House body -->
+  <rect x="60" y="90" width="80" height="70" fill="url(#houseGrad)" rx="5"/>
+  
+  <!-- Door -->
+  <rect x="85" y="120" width="30" height="40" fill="#6B4423" rx="15" ry="0"/>
+  <circle cx="107" cy="140" r="2" fill="#FFD700"/>
+  
+  <!-- Windows -->
+  <rect x="68" y="100" width="20" height="20" fill="#87CEEB" rx="2"/>
+  <line x1="78" y1="100" x2="78" y2="120" stroke="#8B7355" stroke-width="2"/>
+  <line x1="68" y1="110" x2="88" y2="110" stroke="#8B7355" stroke-width="2"/>
+  
+  <rect x="112" y="100" width="20" height="20" fill="#87CEEB" rx="2"/>
+  <line x1="122" y1="100" x2="122" y2="120" stroke="#8B7355" stroke-width="2"/>
+  <line x1="112" y1="110" x2="132" y2="110" stroke="#8B7355" stroke-width="2"/>
+  
+  <!-- Coffee cup in window -->
+  <g transform="translate(122, 110) scale(0.4)">
+    <path d="M -10 -5 L -8 5 L 8 5 L 10 -5 Z" fill="#8B4513"/>
+    <path d="M 10 0 Q 15 0 15 3 Q 15 6 10 6" fill="none" stroke="#8B4513" stroke-width="2"/>
+  </g>
+  
+  <!-- Grass -->
+  <rect y="160" width="200" height="40" fill="#7CB342"/>
+  
+  <!-- Path to door -->
+  <path d="M 100 160 L 100 160 Q 95 155 95 150 L 95 140 Q 95 135 100 135 Q 105 135 105 140 L 105 150 Q 105 155 100 160" 
+        fill="#DAA520"/>
+</svg>

@@ -1,0 +1,38 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="latteGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5DEB3;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#DEB887;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B7355;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="#FFF8E7"/>
+  
+  <!-- Latte glass -->
+  <path d="M 60 80 L 55 140 Q 55 150 65 155 L 135 155 Q 145 150 145 140 L 140 80 Z" 
+        fill="url(#latteGrad)" opacity="0.9"/>
+  
+  <!-- Glass rim -->
+  <ellipse cx="100" cy="80" rx="40" ry="8" fill="#E8D5B7"/>
+  
+  <!-- Milk foam -->
+  <ellipse cx="100" cy="82" rx="38" ry="10" fill="#FFFAF0"/>
+  
+  <!-- Latte art - heart -->
+  <path d="M 90 85 Q 85 80 80 85 Q 80 95 100 105 Q 120 95 120 85 Q 115 80 110 85 Q 105 88 100 85 Q 95 88 90 85" 
+        fill="#8B4513"/>
+  
+  <!-- Handle -->
+  <path d="M 145 100 Q 165 100 165 120 Q 165 135 145 135" 
+        fill="none" stroke="#DEB887" stroke-width="8"/>
+  
+  <!-- Base -->
+  <ellipse cx="100" cy="155" rx="45" ry="6" fill="#D4A574"/>
+  
+  <!-- Coffee beans decoration -->
+  <ellipse cx="35" cy="45" rx="6" ry="10" fill="#6F4E37" transform="rotate(25 35 45)"/>
+  <ellipse cx="50" cy="35" rx="6" ry="10" fill="#6F4E37" transform="rotate(-15 50 35)"/>
+  <ellipse cx="165" cy="165" rx="6" ry="10" fill="#6F4E37" transform="rotate(35 165 165)"/>
+</svg>

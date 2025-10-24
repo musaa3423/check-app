@@ -1,0 +1,49 @@
+// Prisma Schema for شيّك (CHECK) Application
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// User model for authentication
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  phone     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Cafe model
+model Cafe {
+  id              String   @id @default(cuid())
+  name            String
+  city            String
+  logo            String
+  capacity        Int      @default(50)
+  currentLevel    String   // 'busy', 'moderate', 'empty'
+  estimatedPeople Int      @default(0)
+  lastUpdated     DateTime @default(now())
+  
+  @@index([city])
+}
+
+// Crowdedness history for AI learning
+model CrowdHistory {
+  id          String   @id @default(cuid())
+  cafeId      String
+  crowdLevel  String
+  hour        Int
+  dayOfWeek   Int
+  isWeekend   Boolean
+  isPeakHour  Boolean
+  timestamp   DateTime @default(now())
+  
+  @@index([cafeId, timestamp])
+}

@@ -1,0 +1,54 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blackCoffeeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C2C2C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="beanGrad">
+      <stop offset="0%" style="stop-color:#6F4E37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3E2723;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="#1A1A1A"/>
+  
+  <!-- Large coffee cup silhouette -->
+  <path d="M 50 70 Q 48 100 55 130 L 145 130 Q 152 100 150 70 L 50 70" 
+        fill="url(#blackCoffeeGrad)"/>
+  
+  <!-- Cup rim -->
+  <ellipse cx="100" cy="70" rx="50" ry="10" fill="#3E3E3E"/>
+  
+  <!-- Handle -->
+  <path d="M 150 85 Q 175 85 175 105 Q 175 125 150 125" 
+        fill="none" stroke="url(#blackCoffeeGrad)" stroke-width="12"/>
+  
+  <!-- Coffee liquid surface -->
+  <ellipse cx="100" cy="72" rx="48" ry="8" fill="#000000"/>
+  
+  <!-- Steam rising -->
+  <path d="M 70 55 Q 65 40 70 25" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.4"/>
+  <path d="M 90 50 Q 85 35 90 20" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.4"/>
+  <path d="M 110 50 Q 105 35 110 20" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.4"/>
+  <path d="M 130 55 Q 125 40 130 25" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.4"/>
+  
+  <!-- Coffee beans around -->
+  <ellipse cx="25" cy="100" rx="8" ry="14" fill="url(#beanGrad)" transform="rotate(25 25 100)"/>
+  <line x1="25" y1="92" x2="25" y2="108" stroke="#1A1A1A" stroke-width="2"/>
+  
+  <ellipse cx="175" cy="95" rx="8" ry="14" fill="url(#beanGrad)" transform="rotate(-30 175 95)"/>
+  <line x1="175" y1="87" x2="175" y2="103" stroke="#1A1A1A" stroke-width="2"/>
+  
+  <ellipse cx="35" cy="160" rx="8" ry="14" fill="url(#beanGrad)" transform="rotate(45 35 160)"/>
+  <line x1="35" y1="152" x2="35" y2="168" stroke="#1A1A1A" stroke-width="2"/>
+  
+  <ellipse cx="165" cy="155" rx="8" ry="14" fill="url(#beanGrad)" transform="rotate(-15 165 155)"/>
+  <line x1="165" y1="147" x2="165" y2="163" stroke="#1A1A1A" stroke-width="2"/>
+  
+  <!-- Saucer -->
+  <ellipse cx="100" cy="130" rx="60" ry="10" fill="#2C2C2C"/>
+  
+  <!-- "BLACK COFFEE" text at bottom -->
+  <text x="100" y="175" font-family="Arial" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle" opacity="0.7">BLACK COFFEE</text>
+</svg>

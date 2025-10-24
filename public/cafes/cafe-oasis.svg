@@ -1,0 +1,43 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="oasisGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4682B4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background - desert -->
+  <circle cx="100" cy="100" r="95" fill="#F4A460"/>
+  
+  <!-- Oasis water -->
+  <ellipse cx="100" cy="130" rx="60" ry="35" fill="url(#oasisGrad)"/>
+  
+  <!-- Palm trees -->
+  <!-- Left palm -->
+  <rect x="40" y="80" width="8" height="60" fill="#8B4513"/>
+  <ellipse cx="44" cy="75" rx="20" ry="28" fill="#228B22"/>
+  <ellipse cx="25" cy="70" rx="18" ry="10" fill="#228B22" transform="rotate(-40 25 70)"/>
+  <ellipse cx="63" cy="70" rx="18" ry="10" fill="#228B22" transform="rotate(40 63 70)"/>
+  
+  <!-- Center palm -->
+  <rect x="96" y="50" width="8" height="80" fill="#8B4513"/>
+  <ellipse cx="100" cy="45" rx="22" ry="30" fill="#228B22"/>
+  <ellipse cx="78" cy="42" rx="20" ry="12" fill="#228B22" transform="rotate(-35 78 42)"/>
+  <ellipse cx="122" cy="42" rx="20" ry="12" fill="#228B22" transform="rotate(35 122 42)"/>
+  
+  <!-- Right palm -->
+  <rect x="152" y="85" width="8" height="55" fill="#8B4513"/>
+  <ellipse cx="156" cy="80" rx="19" ry="26" fill="#228B22"/>
+  <ellipse cx="138" cy="75" rx="17" ry="10" fill="#228B22" transform="rotate(-38 138 75)"/>
+  <ellipse cx="174" cy="75" rx="17" ry="10" fill="#228B22" transform="rotate(38 174 75)"/>
+  
+  <!-- Water ripples -->
+  <ellipse cx="100" cy="125" rx="40" ry="8" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.5"/>
+  <ellipse cx="100" cy="135" rx="50" ry="10" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Sun -->
+  <circle cx="170" cy="30" r="20" fill="#FFD700" opacity="0.8"/>
+  
+  <!-- Coffee cup reflection -->
+  <path d="M 90 145 L 92 155 L 108 155 L 110 145 Z" fill="#8B4513" opacity="0.6"/>
+</svg>

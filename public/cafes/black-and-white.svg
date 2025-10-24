@@ -1,0 +1,27 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circles -->
+  <circle cx="100" cy="100" r="95" fill="#F5F5F5"/>
+  
+  <!-- Black circle -->
+  <circle cx="75" cy="100" r="45" fill="#000000"/>
+  
+  <!-- White circle -->
+  <circle cx="125" cy="100" r="45" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+  
+  <!-- Coffee cup in white circle -->
+  <g transform="translate(125, 100)">
+    <path d="M -15 -10 L -12 10 L 12 10 L 15 -10 Z" fill="#000000"/>
+    <ellipse cx="0" cy="-10" rx="15" ry="4" fill="#654321"/>
+    <path d="M 15 -2 Q 22 -2 22 5 Q 22 12 15 12" fill="none" stroke="#000000" stroke-width="2"/>
+  </g>
+  
+  <!-- Coffee beans in black circle -->
+  <g transform="translate(75, 100)">
+    <ellipse cx="-8" cy="-5" rx="6" ry="10" fill="#8B4513" transform="rotate(30 -8 -5)"/>
+    <ellipse cx="8" cy="5" rx="6" ry="10" fill="#8B4513" transform="rotate(-30 8 5)"/>
+    <ellipse cx="0" cy="-12" rx="5" ry="9" fill="#8B4513" transform="rotate(15 0 -12)"/>
+  </g>
+  
+  <!-- Yin-yang divider -->
+  <path d="M 100 55 L 100 145" stroke="#666666" stroke-width="1" stroke-dasharray="5,5"/>
+</svg>

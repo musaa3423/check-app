@@ -1,0 +1,84 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="starGrad">
+      <stop offset="0%" style="stop-color:#FFEB3B;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="cupGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00704A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2E7D32;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1B5E20;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow3D">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+      <feOffset dx="6" dy="8" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.6"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="glowEffect">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- 3D Background with glow -->
+  <circle cx="100" cy="100" r="98" fill="url(#glowEffect)"/>
+  <circle cx="100" cy="100" r="95" fill="#FFFFFF" filter="url(#shadow3D)"/>
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#E0E0E0" stroke-width="1"/>
+  
+  <!-- 3D Green circle with depth -->
+  <circle cx="100" cy="100" r="85" fill="url(#cupGrad2)" filter="url(#shadow3D)"/>
+  <!-- Inner highlight -->
+  <circle cx="95" cy="95" r="15" fill="#4CAF50" opacity="0.3"/>
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="#00704A" stroke-width="2" opacity="0.5"/>
+  
+  <!-- 3D Star with glow and depth -->
+  <g filter="url(#shadow3D)">
+    <path d="M 100 30 L 110 60 L 142 60 L 117 78 L 127 108 L 100 90 L 73 108 L 83 78 L 58 60 L 90 60 Z" 
+          fill="url(#starGrad)" stroke="#FFD700" stroke-width="2"/>
+    <!-- Star highlights -->
+    <path d="M 100 35 L 105 55 L 120 55 L 110 65 Z" 
+          fill="#FFFACD" opacity="0.7"/>
+  </g>
+  <!-- Star glow -->
+  <path d="M 100 30 L 110 60 L 142 60 L 117 78 L 127 108 L 100 90 L 73 108 L 83 78 L 58 60 L 90 60 Z" 
+        fill="#FFD700" opacity="0.2" transform="scale(1.1) translate(-10, -10)"/>
+  
+  <!-- 3D Coffee cup outline with depth -->
+  <g filter="url(#shadow3D)">
+    <path d="M 70 120 Q 70 140 75 155 L 125 155 Q 130 140 130 120 L 70 120" 
+          fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+    <!-- Inner highlight -->
+    <path d="M 72 122 Q 72 138 76 150 L 80 150 Q 78 138 78 122 Z" 
+          fill="#E8F5E9" opacity="0.5"/>
+  </g>
+  
+  <!-- 3D Cup handle with depth -->
+  <g filter="url(#shadow3D)">
+    <path d="M 130 130 Q 145 130 145 140 Q 145 150 130 150" 
+          fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+    <!-- Handle highlight -->
+    <path d="M 131 132 Q 143 132 143 140 Q 143 148 131 148" 
+          fill="none" stroke="#E8F5E9" stroke-width="1.5" opacity="0.6"/>
+  </g>
+  
+  <!-- 3D Steam lines with glow -->
+  <g opacity="0.9">
+    <path d="M 80 110 Q 75 100 80 90" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" filter="url(#shadow3D)"/>
+    <path d="M 100 105 Q 95 95 100 85" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" filter="url(#shadow3D)"/>
+    <path d="M 120 110 Q 115 100 120 90" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" filter="url(#shadow3D)"/>
+  </g>
+  <!-- Steam glow -->
+  <circle cx="100" cy="95" r="20" fill="#FFFFFF" opacity="0.1"/>
+  
+  <!-- 3D Crown/siren with depth -->
+  <circle cx="100" cy="140" r="12" fill="#FFFFFF" opacity="0.4" filter="url(#shadow3D)"/>
+  <circle cx="100" cy="140" r="10" fill="#E8F5E9" opacity="0.3"/>
+</svg>

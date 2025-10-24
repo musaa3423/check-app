@@ -1,0 +1,40 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nescafeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E31E24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B71C1C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="#FFF3E0"/>
+  
+  <!-- Instant coffee jar -->
+  <rect x="60" y="70" width="80" height="90" fill="#8B4513" rx="5"/>
+  
+  <!-- Jar lid -->
+  <rect x="55" y="60" width="90" height="15" fill="#FFD700" rx="3"/>
+  <ellipse cx="100" cy="60" rx="45" ry="7" fill="#FFA500"/>
+  
+  <!-- Label background -->
+  <rect x="65" y="85" width="70" height="60" fill="#FFFFFF" rx="5"/>
+  
+  <!-- Red oval logo -->
+  <ellipse cx="100" cy="110" rx="30" ry="22" fill="url(#nescafeGrad)"/>
+  
+  <!-- Coffee cup icon on label -->
+  <g transform="translate(100, 110) scale(0.6)">
+    <path d="M -15 -8 L -12 8 L 12 8 L 15 -8 Z" fill="#FFFFFF"/>
+    <path d="M 15 0 Q 22 0 22 6 Q 22 12 15 12" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    <!-- Steam -->
+    <path d="M -5 -15 Q -7 -20 -5 -25" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+    <path d="M 5 -15 Q 3 -20 5 -25" fill="none" stroke="#FFFFFF" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Coffee granules at bottom -->
+  <ellipse cx="100" cy="155" rx="35" ry="5" fill="#3E2723"/>
+  
+  <!-- Spoon -->
+  <ellipse cx="150" cy="140" rx="8" ry="12" fill="#C0C0C0"/>
+  <rect x="148" y="135" width="4" height="45" fill="#C0C0C0" rx="2"/>
+</svg>

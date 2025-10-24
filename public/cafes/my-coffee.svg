@@ -1,0 +1,55 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="coffeeGrad">
+      <stop offset="0%" style="stop-color:#6F4E37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3E2723;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="#FFF8DC"/>
+  
+  <!-- Arabic coffee pot (Dallah) -->
+  <ellipse cx="100" cy="140" rx="35" ry="12" fill="#B8860B"/>
+  
+  <!-- Pot body -->
+  <path d="M 70 140 Q 65 120 70 100 Q 75 85 100 80 Q 125 85 130 100 Q 135 120 130 140 Z" 
+        fill="#DAA520" stroke="#B8860B" stroke-width="2"/>
+  
+  <!-- Pot neck -->
+  <rect x="95" y="70" width="10" height="15" fill="#DAA520" stroke="#B8860B" stroke-width="2"/>
+  
+  <!-- Pot lid -->
+  <ellipse cx="100" cy="70" rx="12" ry="6" fill="#B8860B"/>
+  <circle cx="100" cy="65" r="4" fill="#FFD700"/>
+  
+  <!-- Spout -->
+  <path d="M 130 110 Q 155 105 165 115" fill="none" stroke="#DAA520" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 130 110 Q 155 105 165 115" fill="none" stroke="#B8860B" stroke-width="2"/>
+  
+  <!-- Handle -->
+  <path d="M 70 105 Q 45 105 45 120 Q 45 135 70 135" 
+        fill="none" stroke="#DAA520" stroke-width="8"/>
+  <path d="M 70 105 Q 45 105 45 120 Q 45 135 70 135" 
+        fill="none" stroke="#B8860B" stroke-width="2"/>
+  
+  <!-- Decorative pattern on pot -->
+  <circle cx="85" cy="110" r="3" fill="#8B4513"/>
+  <circle cx="100" cy="105" r="3" fill="#8B4513"/>
+  <circle cx="115" cy="110" r="3" fill="#8B4513"/>
+  
+  <!-- Arabic coffee cups -->
+  <g transform="translate(140, 155) scale(0.6)">
+    <path d="M -10 0 L -8 12 L 8 12 L 10 0 Z" fill="#8B7355"/>
+    <ellipse cx="0" cy="0" rx="10" ry="3" fill="#6F4E37"/>
+  </g>
+  
+  <g transform="translate(160, 160) scale(0.6)">
+    <path d="M -10 0 L -8 12 L 8 12 L 10 0 Z" fill="#8B7355"/>
+    <ellipse cx="0" cy="0" rx="10" ry="3" fill="#6F4E37"/>
+  </g>
+  
+  <!-- Steam -->
+  <path d="M 95 60 Q 90 50 95 40" fill="none" stroke="#D3D3D3" stroke-width="2" opacity="0.6"/>
+  <path d="M 105 60 Q 110 50 105 40" fill="none" stroke="#D3D3D3" stroke-width="2" opacity="0.6"/>
+</svg>
