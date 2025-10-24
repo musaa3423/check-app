@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { QRCodeSVG } from 'qrcode.react';
 
 interface LandingPageProps {
   onStart: () => void;
@@ -9,6 +10,12 @@ interface LandingPageProps {
 
 export default function LandingPage({ onStart }: LandingPageProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const [showQR, setShowQR] = useState(false);
+  
+  // Get the current URL (will be the Vercel URL in production)
+  const siteUrl = typeof window !== 'undefined' 
+    ? window.location.origin 
+    : 'https://check-app.vercel.app';
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-teal-50 via-blue-50 to-indigo-100 p-4 md:p-8 lg:p-12 relative overflow-hidden">
@@ -148,6 +155,47 @@ export default function LandingPage({ onStart }: LandingPageProps) {
               <span className="text-3xl text-indigo-500">✓</span>
               <span className="text-xl font-semibold text-gray-700" style={{ direction: 'rtl' }}>دقة عالية</span>
             </div>
+          </div>
+
+          {/* QR Code Section - NEW */}
+          <div className="mt-12">
+            <button
+              onClick={() => setShowQR(!showQR)}
+              className="group relative px-8 py-4 bg-white/90 backdrop-blur-sm hover:bg-white text-gray-700 hover:text-teal-600 font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-teal-200 hover:border-teal-400"
+            >
+              <span className="flex items-center gap-3 text-xl">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                </svg>
+                <span style={{ direction: 'rtl' }}>
+                  {showQR ? 'إخفاء رمز QR' : 'عرض رمز QR للموقع'}
+                </span>
+              </span>
+            </button>
+
+            {/* QR Code Display */}
+            {showQR && (
+              <div className="mt-8 flex flex-col items-center gap-6 animate-fade-in">
+                <div className="bg-white p-8 rounded-3xl shadow-2xl border-4 border-teal-400">
+                  <QRCodeSVG
+                    value={siteUrl}
+                    size={256}
+                    level="H"
+                    includeMargin={true}
+                    fgColor="#0d9488"
+                    bgColor="#ffffff"
+                  />
+                </div>
+                <div className="bg-white/90 backdrop-blur-sm px-8 py-4 rounded-2xl shadow-lg max-w-md">
+                  <p className="text-lg text-gray-700 text-center font-semibold" style={{ direction: 'rtl' }}>
+                    📱 امسح الرمز بكاميرا هاتفك للدخول للموقع
+                  </p>
+                  <p className="text-sm text-gray-500 text-center mt-2">
+                    {siteUrl}
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
