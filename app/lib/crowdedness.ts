@@ -3,24 +3,24 @@ import { Cafe, CrowdLevel, City } from '../types';
 // Cafe definitions (static data)
 const allCafes = [
   // عنيزة - Local cafe images
-  { id: '1', name: 'جار كافيه', logo: '/cafes/unaizah/جار.jpg', city: 'عنيزة' as City },
-  { id: '2', name: 'رحب كافيه', logo: '/cafes/unaizah/رحب.jpg', city: 'عنيزة' as City },
-  { id: '3', name: 'كورنر كافيه', logo: '/cafes/unaizah/كورنر.jpg', city: 'عنيزة' as City },
-  { id: '4', name: 'ڤيل كافيه', logo: '/cafes/unaizah/ڤيل.jpg', city: 'عنيزة' as City },
+  { id: '1', name: 'جار', logo: '/cafes/unaizah/جار.jpg', city: 'عنيزة' as City },
+  { id: '2', name: 'رحب', logo: '/cafes/unaizah/رحب.jpg', city: 'عنيزة' as City },
+  { id: '3', name: 'كورنر', logo: '/cafes/unaizah/كورنر.jpg', city: 'عنيزة' as City },
+  { id: '4', name: 'ڤيل', logo: '/cafes/unaizah/ڤيل.jpg', city: 'عنيزة' as City },
   // بريدة - Modern cafes with local images
-  { id: '5', name: 'هانيم كافيه', logo: '/cafes/buraidah/HANIME.jpg', city: 'بريدة' as City },
-  { id: '6', name: 'سلم كافيه', logo: '/cafes/buraidah/SALM.jpg', city: 'بريدة' as City },
-  { id: '7', name: 'تلو كافيه', logo: '/cafes/buraidah/TLO.jpg', city: 'بريدة' as City },
-  { id: '8', name: 'فيكت كافيه', logo: '/cafes/buraidah/VEKT.jpg', city: 'بريدة' as City },
+  { id: '5', name: 'هانيم', logo: '/cafes/buraidah/HANIME.jpg', city: 'بريدة' as City },
+  { id: '6', name: 'سلم', logo: '/cafes/buraidah/SALM.jpg', city: 'بريدة' as City },
+  { id: '7', name: 'تلو', logo: '/cafes/buraidah/TLO.jpg', city: 'بريدة' as City },
+  { id: '8', name: 'فيكت', logo: '/cafes/buraidah/VEKT.jpg', city: 'بريدة' as City },
   // الرس - Local cafes
-  { id: '9', name: 'اثال كافيه', logo: '/cafes/ar-rass/اثال.jpg', city: 'الرس' as City },
-  { id: '10', name: 'اوليا كافيه', logo: '/cafes/ar-rass/اوليا.jpg', city: 'الرس' as City },
-  { id: '11', name: 'بلاك بير كافيه', logo: '/cafes/ar-rass/بلاك بير.jpg', city: 'الرس' as City },
-  { id: '12', name: 'مورق كافيه', logo: '/cafes/ar-rass/مورق.jpg', city: 'الرس' as City },
+  { id: '9', name: 'اثال', logo: '/cafes/ar-rass/اثال.jpg', city: 'الرس' as City },
+  { id: '10', name: 'اوليا', logo: '/cafes/ar-rass/اوليا.jpg', city: 'الرس' as City },
+  { id: '11', name: 'بلاك بير', logo: '/cafes/ar-rass/بلاك بير.jpg', city: 'الرس' as City },
+  { id: '12', name: 'مورق', logo: '/cafes/ar-rass/مورق.jpg', city: 'الرس' as City },
   // البكيرية - Local cafes
-  { id: '13', name: 'ارت كافيه', logo: '/cafes/al-bukayriyah/ارت.jpg', city: 'البكيرية' as City },
-  { id: '14', name: 'جذاه كافيه', logo: '/cafes/al-bukayriyah/جذاه.jpg', city: 'البكيرية' as City },
-  { id: '15', name: 'خليط كافيه', logo: '/cafes/al-bukayriyah/خليط.jpg', city: 'البكيرية' as City },
+  { id: '13', name: 'ارت', logo: '/cafes/al-bukayriyah/ارت.jpg', city: 'البكيرية' as City },
+  { id: '14', name: 'جذاه', logo: '/cafes/al-bukayriyah/جذاه.jpg', city: 'البكيرية' as City },
+  { id: '15', name: 'خليط', logo: '/cafes/al-bukayriyah/خليط.jpg', city: 'البكيرية' as City },
   { id: '16', name: 'كاڤيوو', logo: '/cafes/al-bukayriyah/كافيو.jpg', city: 'البكيرية' as City },
 ];
 
