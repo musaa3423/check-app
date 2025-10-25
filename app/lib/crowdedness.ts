@@ -2,148 +2,146 @@ import { Cafe, CrowdLevel, City } from '../types';
 
 // Cafe definitions (static data)
 const allCafes = [
-  // عنيزة - Beautiful professional coffee shop images
-  { id: '1', name: 'كوفي لاونج', logo: 'https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&h=400&fit=crop&q=80', city: 'عنيزة' as City },
-  { id: '2', name: 'ميراج كافيه', logo: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&h=400&fit=crop&q=80', city: 'عنيزة' as City },
-  { id: '3', name: 'لافندر كافيه', logo: 'https://images.unsplash.com/photo-1501492673258-5ae9bbaa3c94?w=400&h=400&fit=crop&q=80', city: 'عنيزة' as City },
-  { id: '4', name: 'سمرلاند كافيه', logo: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop&q=80', city: 'عنيزة' as City },
-  { id: '5', name: 'كوفي بلس', logo: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&h=400&fit=crop&q=80', city: 'عنيزة' as City },
-  { id: '6', name: 'بلاك آند وايت', logo: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=400&fit=crop&q=80', city: 'عنيزة' as City },
-  { id: '7', name: 'كافيه دي روما', logo: 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=400&h=400&fit=crop&q=80', city: 'عنيزة' as City },
-  { id: '8', name: 'ذا كافيه', logo: 'https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=400&h=400&fit=crop&q=80', city: 'عنيزة' as City },
-  // بريدة - Starbucks and modern cafes
-  { id: '9', name: 'ستاربكس', logo: 'https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?w=400&h=400&fit=crop&q=80', city: 'بريدة' as City },
-  { id: '10', name: 'كافيه لاتيه', logo: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=400&fit=crop&q=80', city: 'بريدة' as City },
-  { id: '11', name: 'نسكافيه', logo: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=400&fit=crop&q=80', city: 'بريدة' as City },
-  { id: '12', name: 'كوفي هاوس', logo: 'https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=400&h=400&fit=crop&q=80', city: 'بريدة' as City },
-  // الرس - Traditional and royal cafes
-  { id: '13', name: 'كافيه الواحة', logo: 'https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=400&h=400&fit=crop&q=80', city: 'الرس' as City },
-  { id: '14', name: 'قهوتي', logo: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400&h=400&fit=crop&q=80', city: 'الرس' as City },
-  { id: '15', name: 'الكافيه الملكي', logo: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&h=400&fit=crop&q=80', city: 'الرس' as City },
-  // البكيرية - Garden and outdoor cafes
-  { id: '16', name: 'كوفي شوب', logo: 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=400&h=400&fit=crop&q=80', city: 'البكيرية' as City },
-  { id: '17', name: 'كافيه الحديقة', logo: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=400&h=400&fit=crop&q=80', city: 'البكيرية' as City },
-  { id: '18', name: 'بلاك كوفي', logo: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=400&fit=crop&q=80', city: 'البكيرية' as City },
+  // عنيزة - Local cafe images
+  { id: '1', name: 'جار كافيه', logo: '/cafes/unaizah/جار.jpg', city: 'عنيزة' as City },
+  { id: '2', name: 'رحب كافيه', logo: '/cafes/unaizah/رحب.jpg', city: 'عنيزة' as City },
+  { id: '3', name: 'كورنر كافيه', logo: '/cafes/unaizah/كورنر.jpg', city: 'عنيزة' as City },
+  { id: '4', name: 'ڤيل كافيه', logo: '/cafes/unaizah/ڤيل.jpg', city: 'عنيزة' as City },
+  // بريدة - Modern cafes with local images
+  { id: '5', name: 'هانيم كافيه', logo: '/cafes/buraidah/HANIME.jpg', city: 'بريدة' as City },
+  { id: '6', name: 'سلم كافيه', logo: '/cafes/buraidah/SALM.jpg', city: 'بريدة' as City },
+  { id: '7', name: 'تلو كافيه', logo: '/cafes/buraidah/TLO.jpg', city: 'بريدة' as City },
+  { id: '8', name: 'فيكت كافيه', logo: '/cafes/buraidah/VEKT.jpg', city: 'بريدة' as City },
+  // الرس - Local cafes
+  { id: '9', name: 'اثال كافيه', logo: '/cafes/ar-rass/اثال.jpg', city: 'الرس' as City },
+  { id: '10', name: 'اوليا كافيه', logo: '/cafes/ar-rass/اوليا.jpg', city: 'الرس' as City },
+  { id: '11', name: 'بلاك بير كافيه', logo: '/cafes/ar-rass/بلاك بير.jpg', city: 'الرس' as City },
+  { id: '12', name: 'مورق كافيه', logo: '/cafes/ar-rass/مورق.jpg', city: 'الرس' as City },
+  // البكيرية - Local cafes
+  { id: '13', name: 'ارت كافيه', logo: '/cafes/al-bukayriyah/ارت.jpg', city: 'البكيرية' as City },
+  { id: '14', name: 'جذاه كافيه', logo: '/cafes/al-bukayriyah/جذاه.jpg', city: 'البكيرية' as City },
+  { id: '15', name: 'خليط كافيه', logo: '/cafes/al-bukayriyah/خليط.jpg', city: 'البكيرية' as City },
+  { id: '16', name: 'كافيو', logo: '/cafes/al-bukayriyah/كافيو.jpg', city: 'البكيرية' as City },
 ];
 
-// Advanced AI-based crowdedness analysis - BALANCED VERSION
+// Advanced AI-based crowdedness analysis - EXTREME VARIETY VERSION
 // This function is called FRESH on each API request (Vercel serverless compatible)
 function analyzeRealTimeCrowdedness(cafeId: string, cafeName: string): CrowdLevel {
   const now = new Date();
   const hour = now.getHours();
   const minute = now.getMinutes();
-  const dayOfWeek = now.getDay();
-  const dayOfMonth = now.getDate();
-  
-  // Use cafe ID to create consistent but varied patterns
   const cafeIdNum = parseInt(cafeId);
-  const cafeVariation = (cafeIdNum * 7 + minute) % 100; // Creates variety between cafes
   
-  // AI Analysis Factors:
+  // Create strong variety based on cafe ID
+  const randomFactor = Math.random();
+  
+  // Simple but effective distribution:
+  // 50% random + 30% cafe-based + 20% time-based
+  
   let crowdScore = 0;
   
-  // 1. Base score varies by cafe (creates diversity)
-  const baseScore = (cafeVariation / 100) * 0.3; // 0-0.3 range
-  crowdScore += baseScore;
+  // 1. Random factor (50%) - MAIN SOURCE OF VARIETY
+  crowdScore += randomFactor * 0.5;
   
-  // 2. Time-based patterns (30% weight)
-  const timeScore = calculateTimeScore(hour, minute);
-  crowdScore += timeScore * 0.3;
+  // 2. Cafe-specific factor (30%)
+  const cafePattern = (cafeIdNum % 7) / 10; // 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6
+  crowdScore += cafePattern * 0.3;
   
-  // 3. Day patterns (20% weight)
-  const dayScore = calculateDayScore(dayOfWeek, dayOfMonth);
-  crowdScore += dayScore * 0.2;
+  // 3. Time factor (20%) - Less impact
+  let timeFactor = 0.3; // Base
+  if (hour >= 20 && hour <= 22) {
+    timeFactor = 0.6; // Peak hours
+  } else if (hour >= 8 && hour <= 10) {
+    timeFactor = 0.4; // Morning
+  } else if (hour >= 14 && hour <= 17) {
+    timeFactor = 0.2; // Afternoon slow
+  } else if (hour >= 3 && hour <= 7) {
+    timeFactor = 0.1; // Very early
+  }
+  crowdScore += timeFactor * 0.2;
   
-  // 4. Cafe-specific patterns (20% weight)
-  const cafeScore = calculateCafeScore(cafeId, cafeName, hour);
-  crowdScore += cafeScore * 0.2;
-  
-  // 5. Dynamic random variations for realism (30% weight)
-  const randomScore = Math.random();
-  crowdScore += randomScore * 0.3;
-  
-  // Determine crowd level with balanced thresholds
-  if (crowdScore >= 0.6) return 'busy';
-  if (crowdScore >= 0.35) return 'moderate';
-  return 'empty';
+  // ADJUSTED THRESHOLDS for better distribution
+  if (crowdScore >= 0.55) return 'busy';      // ~30% busy
+  if (crowdScore >= 0.3) return 'moderate';   // ~35% moderate  
+  return 'empty';                              // ~35% EMPTY
 }
 
 function calculateTimeScore(hour: number, minute: number): number {
-  let score = 0.2; // Lower base score for more variety
+  let score = 0.15; // Very low base score for more variety
   
-  // Peak hours: 8 PM - 10 PM
+  // Peak hours: 8 PM - 10 PM (ONLY these are truly busy)
   if (hour >= 20 && hour <= 22) {
-    score += 0.5;
+    score += 0.4;
   }
   
-  // Evening busy: 5 PM - 8 PM
-  else if (hour >= 17 && hour <= 19) {
-    score += 0.3;
+  // Evening moderate: 6 PM - 8 PM
+  else if (hour >= 18 && hour <= 19) {
+    score += 0.25;
   }
   
-  // Morning coffee rush: 8 AM - 10 AM
+  // Morning coffee: 8 AM - 10 AM
   else if (hour >= 8 && hour <= 10) {
-    score += 0.35;
+    score += 0.2;
   }
   
   // Lunch time: 12 PM - 2 PM
   else if (hour >= 12 && hour <= 14) {
-    score += 0.25;
-  }
-  
-  // Moderate times: 3 PM - 5 PM
-  else if (hour >= 15 && hour <= 16) {
     score += 0.15;
   }
   
-  // Late night: 11 PM - 1 AM (some cafes still open)
+  // Off-peak afternoon: 2 PM - 5 PM (GOOD TIME FOR EMPTY)
+  else if (hour >= 14 && hour <= 17) {
+    score -= 0.1; // Negative score = more empty cafes
+  }
+  
+  // Late night: 11 PM - 1 AM
   else if (hour === 23 || hour === 0 || hour === 1) {
-    score += 0.1;
-  }
-  
-  // Very early morning: 3 AM - 6 AM (mostly empty)
-  else if (hour >= 3 && hour <= 6) {
-    score -= 0.2;
-  }
-  
-  // Off-peak hours: 11 AM, 2-4 PM (good chance for empty)
-  else if (hour === 11 || (hour >= 14 && hour <= 16)) {
     score += 0.05;
   }
   
+  // Very early morning: 3 AM - 7 AM (VERY EMPTY)
+  else if (hour >= 3 && hour <= 7) {
+    score -= 0.3; // Strong negative = very empty
+  }
+  
+  // Late morning: 11 AM (good chance for empty)
+  else if (hour === 11) {
+    score -= 0.05;
+  }
+  
   // Minute-based micro-variations
-  const minuteVariation = (Math.sin(minute / 10) * 0.08);
+  const minuteVariation = (Math.sin(minute / 10) * 0.06);
   score += minuteVariation;
   
   return Math.max(0, Math.min(1, score));
 }
 
 function calculateDayScore(dayOfWeek: number, dayOfMonth: number): number {
-  let score = 0.2; // Lower base for more variety
+  let score = 0.15; // Very low base for more empty cafes
   
-  // Weekend in Saudi Arabia (Thursday-Friday)
+  // Weekend in Saudi Arabia (Thursday-Friday) - busier
   if (dayOfWeek === 4 || dayOfWeek === 5) {
-    score += 0.3;
+    score += 0.25;
   }
   
-  // Wednesday evening (pre-weekend)
+  // Wednesday (pre-weekend)
   else if (dayOfWeek === 3) {
-    score += 0.15;
+    score += 0.1;
   }
   
   // Saturday (some weekend effect)
   else if (dayOfWeek === 6) {
-    score += 0.1;
+    score += 0.05;
   }
   
-  // Sunday-Tuesday (normal weekdays - more empty cafes)
+  // Sunday-Tuesday (normal weekdays - MORE EMPTY CAFES)
   else if (dayOfWeek >= 0 && dayOfWeek <= 2) {
-    score -= 0.15;
+    score -= 0.2; // Strong negative for more empty
   }
   
   // End/start of month (payday effect)
   if (dayOfMonth <= 3 || dayOfMonth >= 28) {
-    score += 0.1;
+    score += 0.08;
   }
   
   return Math.max(0, Math.min(1, score));
@@ -151,47 +149,48 @@ function calculateDayScore(dayOfWeek: number, dayOfMonth: number): number {
 
 function calculateCafeScore(cafeId: string, cafeName: string, hour: number): number {
   const idNum = parseInt(cafeId);
-  let score = 0.3; // Neutral base score
+  let score = 0.2; // Lower neutral base
   
-  // Create variety based on cafe ID
+  // Create MORE variety based on cafe ID
   if (idNum % 2 === 0) {
-    score -= 0.1; // Even IDs are less busy (more empty)
+    score -= 0.15; // Even IDs much less busy
   } else {
-    score += 0.1; // Odd IDs are busier
+    score += 0.08; // Odd IDs slightly busier
   }
   
-  // Popular cafes patterns
-  const popularNames = ['ستاربكس', 'لافندر', 'ميراج'];
+  // Every third cafe is VERY empty
+  if (idNum % 3 === 0) {
+    score -= 0.2;
+  }
+  
+  // Popular cafes (fewer now)
+  const popularNames = ['هانيم', 'رحب'];
   if (popularNames.some(name => cafeName.includes(name))) {
-    score += 0.15;
+    score += 0.12;
   }
   
-  // Less popular cafes (more likely to be empty)
-  const quietCafes = ['بلاك كوفي', 'كوفي شوب', 'قهوتي'];
+  // Less popular cafes (more likely empty)
+  const quietCafes = ['اثال', 'خليط', 'كورنر', 'جذاه', 'مورق'];
   if (quietCafes.some(name => cafeName.includes(name))) {
-    score -= 0.15;
+    score -= 0.18;
   }
   
-  // Time-based cafe preferences
-  if (hour >= 7 && hour <= 10) {
-    // Breakfast cafes
-    if (cafeName.includes('كوفي') || cafeName.includes('قهوة')) {
-      score += 0.15;
-    }
-  }
-  
-  if (hour >= 20 && hour <= 23) {
-    // Evening lounges
-    if (cafeName.includes('لاونج') || cafeName.includes('كافيه')) {
+  // Time-based preferences (reduced impact)
+  if (hour >= 8 && hour <= 10) {
+    if (cafeName.includes('جار') || cafeName.includes('ڤيل')) {
       score += 0.1;
     }
   }
   
-  // Some cafes are naturally quieter in afternoon
-  if (hour >= 14 && hour <= 16) {
-    if (idNum % 3 === 0) {
-      score -= 0.2; // Every 3rd cafe is emptier in afternoon
+  if (hour >= 20 && hour <= 22) {
+    if (cafeName.includes('تلو') || cafeName.includes('سلم')) {
+      score += 0.08;
     }
+  }
+  
+  // Afternoon slowdown (2-5 PM) - many cafes empty
+  if (hour >= 14 && hour <= 17) {
+    score -= 0.25; // Strong negative
   }
   
   return Math.max(0, Math.min(1, score));
