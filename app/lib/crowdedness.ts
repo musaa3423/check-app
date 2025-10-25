@@ -21,7 +21,7 @@ const allCafes = [
   { id: '13', name: 'ارت كافيه', logo: '/cafes/al-bukayriyah/ارت.jpg', city: 'البكيرية' as City },
   { id: '14', name: 'جذاه كافيه', logo: '/cafes/al-bukayriyah/جذاه.jpg', city: 'البكيرية' as City },
   { id: '15', name: 'خليط كافيه', logo: '/cafes/al-bukayriyah/خليط.jpg', city: 'البكيرية' as City },
-  { id: '16', name: 'كافيو', logo: '/cafes/al-bukayriyah/كافيو.jpg', city: 'البكيرية' as City },
+  { id: '16', name: 'كاڤيوو', logo: '/cafes/al-bukayriyah/كافيو.jpg', city: 'البكيرية' as City },
 ];
 
 // Advanced AI-based crowdedness analysis - EXTREME VARIETY VERSION
