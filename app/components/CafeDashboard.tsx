@@ -55,7 +55,7 @@ export default function CafeDashboard({ city, onChangeCity }: CafeDashboardProps
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-teal-50 via-blue-50 to-indigo-50">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-teal-600 border-solid mx-auto mb-4"></div>
           <p className="text-xl text-gray-600" style={{ direction: 'rtl' }}>جاري التحميل...</p>
@@ -65,14 +65,14 @@ export default function CafeDashboard({ city, onChangeCity }: CafeDashboardProps
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50">
       {/* Header */}
       <header className="bg-white shadow-md sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <button
               onClick={onChangeCity}
-              className="text-teal-600 hover:text-teal-700 font-semibold flex items-center gap-2"
+              className="text-emerald-600 hover:text-emerald-700 font-semibold flex items-center gap-2"
             >
               <span>←</span>
               <span style={{ direction: 'rtl' }}>تغيير المدينة</span>
@@ -94,9 +94,9 @@ export default function CafeDashboard({ city, onChangeCity }: CafeDashboardProps
         {/* Suggestions Section */}
         {suggestedCafes.length > 0 && (
           <section className="mb-12">
-            <div className="bg-gradient-to-r from-green-100 to-teal-100 rounded-2xl p-6 shadow-lg mb-6">
+            <div className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-2xl p-6 shadow-lg mb-6">
               <h2 className="text-2xl font-bold text-gray-800 mb-1 text-right" style={{ direction: 'rtl' }}>
-                ✨ اقتراحات لك
+                اقتراحات لك
               </h2>
               <p className="text-gray-600 text-right" style={{ direction: 'rtl' }}>
                 كوفيهات فاضية ومتاحة الآن

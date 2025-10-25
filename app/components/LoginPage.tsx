@@ -49,7 +49,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-teal-50 via-blue-50 to-indigo-50 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 p-4">
       <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-2" style={{ direction: 'rtl' }}>
           {mode === 'login' ? 'تسجيل الدخول' : 'إنشاء حساب جديد'}
@@ -69,7 +69,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
               }}
               className={`flex-1 py-2 rounded-md transition ${
                 mode === 'login'
-                  ? 'bg-white shadow text-teal-600 font-semibold'
+                  ? 'bg-white shadow text-emerald-600 font-semibold'
                   : 'text-gray-600'
               }`}
             >
@@ -83,7 +83,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
               }}
               className={`flex-1 py-2 rounded-md transition ${
                 mode === 'register'
-                  ? 'bg-white shadow text-teal-600 font-semibold'
+                  ? 'bg-white shadow text-emerald-600 font-semibold'
                   : 'text-gray-600'
               }`}
             >
@@ -102,7 +102,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="أدخل اسمك"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-teal-500 focus:outline-none text-right"
+                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-500 focus:outline-none text-right"
                 style={{ direction: 'rtl' }}
               />
             </div>
@@ -118,7 +118,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="example@email.com"
-              className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-teal-500 focus:outline-none text-left"
+              className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-500 focus:outline-none text-left"
               required
             />
           </div>
@@ -133,7 +133,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
-              className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-teal-500 focus:outline-none text-left"
+              className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-500 focus:outline-none text-left"
               required
               minLength={6}
             />
@@ -155,7 +155,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="05xxxxxxxx"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-teal-500 focus:outline-none text-left"
+                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-500 focus:outline-none text-left"
               />
             </div>
           )}
@@ -169,7 +169,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 bg-teal-600 hover:bg-teal-700 disabled:bg-gray-400 text-white font-semibold rounded-lg transition transform hover:scale-105 disabled:transform-none"
+            className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 text-white font-semibold rounded-lg transition transform hover:scale-105 disabled:transform-none"
           >
             {loading ? 'جاري التحميل...' : (mode === 'login' ? 'تسجيل الدخول' : 'إنشاء الحساب')}
           </button>

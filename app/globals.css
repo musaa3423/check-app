@@ -46,11 +46,11 @@ body {
   animation: gradient 3s ease infinite;
 }
 
-/* Grid pattern for background */
+/* Grid pattern for background - Updated to green theme */
 .bg-grid-pattern {
   background-image: 
-    linear-gradient(rgba(20, 184, 166, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(20, 184, 166, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
@@ -68,13 +68,13 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Glow pulse animation */
+/* Glow pulse animation - Updated to green theme */
 @keyframes glow-pulse {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(20, 184, 166, 0.6), 0 0 60px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.6), 0 0 60px rgba(5, 150, 105, 0.4);
   }
 }
 
