@@ -36,16 +36,16 @@ export default function CitySelection({ onSelectCity }: CitySelectionProps) {
         <div className="text-center mb-12">
           <div className="relative inline-block mb-4">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-green-600 to-teal-700 animate-gradient" style={{ direction: 'rtl' }}>
-              اختر مدينتك
+              اختر منطقتك
             </h2>
             {/* Text shadow effect */}
             <div className="absolute inset-0 -z-10 blur-xl opacity-30 text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-emerald-600 via-green-600 to-teal-700 bg-clip-text text-transparent" style={{ direction: 'rtl' }}>
-              اختر مدينتك
+              اختر منطقتك
             </div>
           </div>
           
           <p className="text-2xl md:text-3xl text-gray-600 font-medium" style={{ direction: 'rtl' }}>
-            اكتشف أفضل الكافيهات في مدينتك
+            اكتشف أفضل الكافيهات في منطقتك
           </p>
           
           {/* Decorative divider */}
@@ -115,7 +115,7 @@ export default function CitySelection({ onSelectCity }: CitySelectionProps) {
         <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-50 to-green-50 px-8 py-4 rounded-full shadow-md">
             <p className="text-lg text-gray-700 font-semibold" style={{ direction: 'rtl' }}>
-              {cities.length} مدن متاحة - المزيد قريباً
+              {cities.length} محافظات متاحة - المزيد قريباً
             </p>
           </div>
         </div>

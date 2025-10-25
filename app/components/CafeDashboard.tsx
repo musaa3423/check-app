@@ -185,9 +185,14 @@ function CafeCard({ cafe, isHighlighted }: CafeCardProps) {
         </div>
 
         {/* Crowd Level Indicator */}
-        <div className="relative h-2 bg-gray-200 rounded-full overflow-hidden">
+        <div className="relative h-3 bg-gray-200 rounded-full overflow-hidden">
           <div
-            className={`absolute inset-y-0 left-0 right-0 ${crowdLevelColors[cafe.crowdLevel]} rounded-full transition-all`}
+            className={`absolute inset-y-0 right-0 ${crowdLevelColors[cafe.crowdLevel]} rounded-full transition-all duration-500`}
+            style={{
+              width: cafe.crowdLevel === 'busy' ? '90%' :
+                     cafe.crowdLevel === 'moderate' ? '60%' :
+                     '30%'
+            }}
           />
         </div>
       </div>
