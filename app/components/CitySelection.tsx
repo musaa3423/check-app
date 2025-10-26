@@ -67,11 +67,11 @@ export default function CitySelection({ onSelectCity }: CitySelectionProps) {
             >
               {/* City Image Background */}
               <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72">
-                <Image
+                {/* Using img tag instead of Next.js Image for better Arabic filename support */}
+                <img
                   src={cityImages[city]}
                   alt={city}
-                  fill
-                  className={`object-cover transition-transform duration-700 ${
+                  className={`object-cover w-full h-full transition-transform duration-700 ${
                     hoveredCity === city ? 'scale-110' : 'scale-100'
                   }`}
                 />

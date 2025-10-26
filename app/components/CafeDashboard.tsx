@@ -32,7 +32,12 @@ export default function CafeDashboard({ city, onChangeCity }: CafeDashboardProps
       const data = await response.json();
       
       if (data.cafes) {
-        setCafes(data.cafes);
+        // Ensure crowdLevel is properly set for each cafe
+        const cafesWithLevels = data.cafes.map((cafe: any) => ({
+          ...cafe,
+          crowdLevel: cafe.crowdLevel || 'moderate' // Default to moderate if not set
+        }));
+        setCafes(cafesWithLevels);
         setLastUpdate(new Date(data.timestamp));
       }
     } catch (error) {
@@ -158,11 +163,11 @@ function CafeCard({ cafe, isHighlighted }: CafeCardProps) {
         <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
           {/* Cafe Image - Enhanced with rounded corners and shadow */}
           <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-lg sm:rounded-xl overflow-hidden shadow-md">
-            <Image
+            {/* Using img tag instead of Next.js Image for better Arabic filename support */}
+            <img
               src={cafe.logo}
               alt={cafe.name}
-              fill
-              className="object-cover"
+              className="object-cover w-full h-full"
             />
           </div>
           <h3 className="text-lg sm:text-xl font-bold text-gray-800 flex-1 text-right" style={{ direction: 'rtl' }}>
