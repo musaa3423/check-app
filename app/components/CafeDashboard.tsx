@@ -56,9 +56,9 @@ export default function CafeDashboard({ city, onChangeCity }: CafeDashboardProps
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-teal-600 border-solid mx-auto mb-4"></div>
-          <p className="text-xl text-gray-600" style={{ direction: 'rtl' }}>جاري التحميل...</p>
+        <div className="text-center p-4">
+          <div className="animate-spin rounded-full h-12 w-12 sm:h-16 sm:w-16 border-t-4 border-teal-600 border-solid mx-auto mb-4"></div>
+          <p className="text-lg sm:text-xl text-gray-600" style={{ direction: 'rtl' }}>جاري التحميل...</p>
         </div>
       </div>
     );
@@ -68,21 +68,21 @@ export default function CafeDashboard({ city, onChangeCity }: CafeDashboardProps
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50">
       {/* Header */}
       <header className="bg-white shadow-md sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <button
               onClick={onChangeCity}
-              className="text-emerald-600 hover:text-emerald-700 font-semibold flex items-center gap-2"
+              className="text-emerald-600 hover:text-emerald-700 font-semibold flex items-center gap-1 sm:gap-2 text-sm sm:text-base"
             >
               <span>←</span>
               <span style={{ direction: 'rtl' }}>تغيير المنطقة</span>
             </button>
             
-            <h1 className="text-2xl font-bold text-gray-800" style={{ direction: 'rtl' }}>
+            <h1 className="text-xl sm:text-2xl font-bold text-gray-800" style={{ direction: 'rtl' }}>
               {city}
             </h1>
             
-            <div className="text-sm text-gray-500 text-left">
+            <div className="text-xs sm:text-sm text-gray-500 text-left">
               <div style={{ direction: 'rtl' }}>آخر تحديث:</div>
               <div>{lastUpdate.toLocaleTimeString('ar-SA', { hour: '2-digit', minute: '2-digit' })}</div>
             </div>
@@ -90,20 +90,20 @@ export default function CafeDashboard({ city, onChangeCity }: CafeDashboardProps
         </div>
       </header>
 
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-6 sm:py-8">
         {/* Suggestions Section */}
         {suggestedCafes.length > 0 && (
-          <section className="mb-12">
-            <div className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-2xl p-6 shadow-lg mb-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-1 text-right" style={{ direction: 'rtl' }}>
+          <section className="mb-8 sm:mb-12">
+            <div className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg mb-4 sm:mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-1 text-right" style={{ direction: 'rtl' }}>
                 اقتراحات لك
               </h2>
-              <p className="text-gray-600 text-right" style={{ direction: 'rtl' }}>
+              <p className="text-gray-600 text-right text-sm sm:text-base" style={{ direction: 'rtl' }}>
                 كوفيهات فاضية ومتاحة الآن
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {suggestedCafes.map((cafe) => (
                 <CafeCard key={cafe.id} cafe={cafe} isHighlighted />
               ))}
@@ -113,11 +113,11 @@ export default function CafeDashboard({ city, onChangeCity }: CafeDashboardProps
 
         {/* All Cafes Section */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-800 mb-6 text-right" style={{ direction: 'rtl' }}>
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 text-right" style={{ direction: 'rtl' }}>
             جميع الكوفيهات
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {cafes.map((cafe) => (
               <CafeCard key={cafe.id} cafe={cafe} />
             ))}
@@ -125,14 +125,14 @@ export default function CafeDashboard({ city, onChangeCity }: CafeDashboardProps
         </section>
 
         {/* Real-time indicator */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full shadow-md">
-            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-gray-700" style={{ direction: 'rtl' }}>
+        <div className="mt-8 sm:mt-12 text-center">
+          <div className="inline-flex items-center gap-2 bg-white px-4 py-2 sm:px-6 sm:py-3 rounded-full shadow-md">
+            <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full animate-pulse"></div>
+            <span className="text-sm sm:text-base text-gray-700" style={{ direction: 'rtl' }}>
               التحديثات الحية - يتم تحديث البيانات تلقائياً كل 15 ثانية
             </span>
           </div>
-          <p className="text-sm text-gray-500 mt-3" style={{ direction: 'rtl' }}>
+          <p className="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-3" style={{ direction: 'rtl' }}>
             يستخدم التطبيق الذكاء الاصطناعي لتحليل حالة الازدحام بشكل مستمر ودقيق
           </p>
         </div>
@@ -149,15 +149,15 @@ interface CafeCardProps {
 function CafeCard({ cafe, isHighlighted }: CafeCardProps) {
   return (
     <div
-      className={`bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 ${
+      className={`bg-white rounded-lg sm:rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 ${
         isHighlighted ? 'ring-2 ring-green-400' : ''
       }`}
     >
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         {/* Logo and Name */}
-        <div className="flex items-center gap-4 mb-4">
+        <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
           {/* Cafe Image - Enhanced with rounded corners and shadow */}
-          <div className="relative w-20 h-20 flex-shrink-0 rounded-xl overflow-hidden shadow-md">
+          <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 rounded-lg sm:rounded-xl overflow-hidden shadow-md">
             <Image
               src={cafe.logo}
               alt={cafe.name}
@@ -165,14 +165,14 @@ function CafeCard({ cafe, isHighlighted }: CafeCardProps) {
               className="object-cover"
             />
           </div>
-          <h3 className="text-xl font-bold text-gray-800 flex-1 text-right" style={{ direction: 'rtl' }}>
+          <h3 className="text-lg sm:text-xl font-bold text-gray-800 flex-1 text-right" style={{ direction: 'rtl' }}>
             {cafe.name}
           </h3>
         </div>
 
         {/* Status Text */}
-        <div className="text-right mb-3">
-          <span className="text-gray-600" style={{ direction: 'rtl' }}>
+        <div className="text-right mb-2 sm:mb-3">
+          <span className="text-gray-600 text-sm sm:text-base" style={{ direction: 'rtl' }}>
             الحالة: 
           </span>
           <span className={`font-semibold mr-2 ${
@@ -185,7 +185,7 @@ function CafeCard({ cafe, isHighlighted }: CafeCardProps) {
         </div>
 
         {/* Crowd Level Indicator */}
-        <div className="relative h-3 bg-gray-200 rounded-full overflow-hidden">
+        <div className="relative h-2 sm:h-3 bg-gray-200 rounded-full overflow-hidden">
           <div
             className={`absolute inset-y-0 right-0 ${crowdLevelColors[cafe.crowdLevel]} rounded-full transition-all duration-500`}
             style={{

@@ -50,24 +50,24 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-green-50 to-teal-50 p-4">
-      <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-2" style={{ direction: 'rtl' }}>
+      <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 w-full max-w-md">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-2" style={{ direction: 'rtl' }}>
           {mode === 'login' ? 'تسجيل الدخول' : 'إنشاء حساب جديد'}
         </h2>
-        <p className="text-center text-gray-600 mb-8" style={{ direction: 'rtl' }}>
+        <p className="text-center text-gray-600 mb-6 sm:mb-8" style={{ direction: 'rtl' }}>
           شيّك قبل تروح
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
           {/* Mode Toggle */}
-          <div className="flex gap-2 bg-gray-100 p-1 rounded-lg">
+          <div className="flex gap-1 sm:gap-2 bg-gray-100 p-1 rounded-lg">
             <button
               type="button"
               onClick={() => {
                 setMode('login');
                 setError('');
               }}
-              className={`flex-1 py-2 rounded-md transition ${
+              className={`flex-1 py-2 sm:py-3 rounded-md transition text-sm sm:text-base ${
                 mode === 'login'
                   ? 'bg-white shadow text-emerald-600 font-semibold'
                   : 'text-gray-600'
@@ -81,7 +81,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
                 setMode('register');
                 setError('');
               }}
-              className={`flex-1 py-2 rounded-md transition ${
+              className={`flex-1 py-2 sm:py-3 rounded-md transition text-sm sm:text-base ${
                 mode === 'register'
                   ? 'bg-white shadow text-emerald-600 font-semibold'
                   : 'text-gray-600'
@@ -94,7 +94,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
           {/* Name (Register only) */}
           {mode === 'register' && (
             <div>
-              <label className="block text-gray-700 mb-2 text-right" style={{ direction: 'rtl' }}>
+              <label className="block text-gray-700 mb-2 text-right text-sm sm:text-base" style={{ direction: 'rtl' }}>
                 الاسم (اختياري)
               </label>
               <input
@@ -102,7 +102,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="أدخل اسمك"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-500 focus:outline-none text-right"
+                className="w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-500 focus:outline-none text-right text-sm sm:text-base"
                 style={{ direction: 'rtl' }}
               />
             </div>
@@ -110,7 +110,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
 
           {/* Email */}
           <div>
-            <label className="block text-gray-700 mb-2 text-right" style={{ direction: 'rtl' }}>
+            <label className="block text-gray-700 mb-2 text-right text-sm sm:text-base" style={{ direction: 'rtl' }}>
               البريد الإلكتروني
             </label>
             <input
@@ -118,14 +118,14 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="example@email.com"
-              className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-500 focus:outline-none text-left"
+              className="w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-500 focus:outline-none text-left text-sm sm:text-base"
               required
             />
           </div>
 
           {/* Password */}
           <div>
-            <label className="block text-gray-700 mb-2 text-right" style={{ direction: 'rtl' }}>
+            <label className="block text-gray-700 mb-2 text-right text-sm sm:text-base" style={{ direction: 'rtl' }}>
               كلمة المرور
             </label>
             <input
@@ -133,7 +133,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
-              className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-500 focus:outline-none text-left"
+              className="w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-500 focus:outline-none text-left text-sm sm:text-base"
               required
               minLength={6}
             />
@@ -147,7 +147,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
           {/* Phone (Register only) */}
           {mode === 'register' && (
             <div>
-              <label className="block text-gray-700 mb-2 text-right" style={{ direction: 'rtl' }}>
+              <label className="block text-gray-700 mb-2 text-right text-sm sm:text-base" style={{ direction: 'rtl' }}>
                 رقم الجوال (اختياري)
               </label>
               <input
@@ -155,7 +155,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="05xxxxxxxx"
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-500 focus:outline-none text-left"
+                className="w-full px-3 py-2 sm:px-4 sm:py-3 border-2 border-gray-300 rounded-lg focus:border-emerald-500 focus:outline-none text-left text-sm sm:text-base"
               />
             </div>
           )}
@@ -169,7 +169,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 text-white font-semibold rounded-lg transition transform hover:scale-105 disabled:transform-none"
+            className="w-full py-3 sm:py-4 bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-400 text-white font-semibold rounded-lg transition transform hover:scale-105 disabled:transform-none text-sm sm:text-base"
           >
             {loading ? 'جاري التحميل...' : (mode === 'login' ? 'تسجيل الدخول' : 'إنشاء الحساب')}
           </button>

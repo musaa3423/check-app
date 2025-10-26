@@ -97,3 +97,127 @@ body {
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
+
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+  /* Adjust font sizes for better readability on small screens */
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Reduce padding and margins on mobile */
+  .p-8 {
+    padding: 1rem !important;
+  }
+  
+  .p-6 {
+    padding: 0.75rem !important;
+  }
+  
+  .p-4 {
+    padding: 0.5rem !important;
+  }
+  
+  .m-8 {
+    margin: 1rem !important;
+  }
+  
+  .m-6 {
+    margin: 0.75rem !important;
+  }
+  
+  .m-4 {
+    margin: 0.5rem !important;
+  }
+  
+  /* Adjust button sizes for better touch targets */
+  button {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+  
+  /* Optimize grid layouts for mobile */
+  .grid-cols-1 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .grid-cols-4 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Reduce image sizes on mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  h1 {
+    font-size: 1.75rem !important;
+  }
+  
+  h2 {
+    font-size: 1.25rem !important;
+  }
+  
+  .text-4xl {
+    font-size: 1.5rem !important;
+  }
+  
+  .text-3xl {
+    font-size: 1.25rem !important;
+  }
+  
+  .text-2xl {
+    font-size: 1.125rem !important;
+  }
+  
+  /* Stack elements vertically on very small screens */
+  .flex {
+    flex-direction: column !important;
+  }
+  
+  .items-center {
+    align-items: stretch !important;
+  }
+  
+  .justify-center {
+    justify-content: center !important;
+  }
+}
+
+/* Ensure proper scaling on all devices */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve touch targets for mobile */
+a, button, input, select, textarea {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
