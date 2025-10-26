@@ -75,7 +75,7 @@ export default function CafeDashboard({ city, onChangeCity }: CafeDashboardProps
               className="text-emerald-600 hover:text-emerald-700 font-semibold flex items-center gap-2"
             >
               <span>←</span>
-              <span style={{ direction: 'rtl' }}>تغيير المدينة</span>
+              <span style={{ direction: 'rtl' }}>تغيير المنطقة</span>
             </button>
             
             <h1 className="text-2xl font-bold text-gray-800" style={{ direction: 'rtl' }}>
